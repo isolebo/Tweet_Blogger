@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Sultan ",
+      "lastName": "Khalid",
+      "email": "hadd@example.com",
+      "password": "jhjhhjhj"
+    },
+    {
+      "id": 2,
+      "firstName": "Omar ",
+      "lastName": "Qureish",
+      "email": "noname@example.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "firstName": "John Doe ",
+      "lastName": "Azeez",
+      "email": "yourname@example.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "firstName": "Mark ",
+      "lastName": "Scott",
+      "email": "hadd@example.com",
+      "password": "jhjhhjhj"
+    },
+    {
+      "id": 5,
+      "firstName": "Omar ",
+      "lastName": "Like",
+      "email": "long@example.com",
+      "password": "654332"
+    }
+  ],
+  "updates": [
+    {
+      "id": 1,
+      "userId": "1",
+      "title": "Going Home",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis egestas felis, et tincidunt sapien consequat a. Morbi condimentum quam ut faucibus dignissim. Phasellus sagittis tellus dapibus nibh tempor viverra. Nam tempus varius urna sit amet vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id dui eget nisl elementum sollicitudin in ut quam. Vestibulum sit amet arcu nisi. Mauris a sem eu tellus luctus varius vitae nec risus. Vivamus malesuada egestas lacinia. Nunc congue iaculis arcu in sollicitudin. Cras imperdiet nibh id aliquet pulvinar. Pellentesque neque libero, dignissim laoreet tellus imperdiet, volutpat condimentum lorem. Vivamus commodo ipsum eu est dapibus auctor. Aenean ac pulvinar sapien."
+    },
+    {
+      "id": 2,
+      "userId": "2",
+      "title": "Welcome To my House",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis egestas felis, et tincidunt sapien consequat a. Morbi condimentum quam ut faucibus dignissim. Phasellus sagittis tellus dapibus nibh tempor viverra. Nam tempus varius urna sit amet vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id dui eget nisl elementum sollicitudin in ut quam. Vestibulum sit amet arcu nisi. Mauris a sem eu tellus luctus varius vitae nec risus. Vivamus malesuada egestas lacinia. Nunc congue iaculis arcu in sollicitudin. Cras imperdiet nibh id aliquet pulvinar. Pellentesque neque libero, dignissim laoreet tellus imperdiet, volutpat condimentum lorem. Vivamus commodo ipsum eu est dapibus auctor. Aenean ac pulvinar sapien."
+    },
+    {
+      "id": 3,
+      "userId": "3",
+      "title": "The new Moon",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis egestas felis, et tincidunt sapien consequat a. Morbi condimentum quam ut faucibus dignissim. Phasellus sagittis tellus dapibus nibh tempor viverra. Nam tempus varius urna sit amet vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id dui eget nisl elementum sollicitudin in ut quam. Vestibulum sit amet arcu nisi. Mauris a sem eu tellus luctus varius vitae nec risus. Vivamus malesuada egestas lacinia. Nunc congue iaculis arcu in sollicitudin. Cras imperdiet nibh id aliquet pulvinar. Pellentesque neque libero, dignissim laoreet tellus imperdiet, volutpat condimentum lorem. Vivamus commodo ipsum eu est dapibus auctor. Aenean ac pulvinar sapien."
+    },
+    {
+      "id": 4,
+      "userId": "4",
+      "title": "Rising Star",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis egestas felis, et tincidunt sapien consequat a. Morbi condimentum quam ut faucibus dignissim. Phasellus sagittis tellus dapibus nibh tempor viverra. Nam tempus varius urna sit amet vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id dui eget nisl elementum sollicitudin in ut quam. Vestibulum sit amet arcu nisi. Mauris a sem eu tellus luctus varius vitae nec risus. Vivamus malesuada egestas lacinia. Nunc congue iaculis arcu in sollicitudin. Cras imperdiet nibh id aliquet pulvinar. Pellentesque neque libero, dignissim laoreet tellus imperdiet, volutpat condimentum lorem. Vivamus commodo ipsum eu est dapibus auctor. Aenean ac pulvinar sapien."
+    },
+    {
+      "id": 5,
+      "userId": "5",
+      "title": "Walking Alone",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis egestas felis, et tincidunt sapien consequat a. Morbi condimentum quam ut faucibus dignissim. Phasellus sagittis tellus dapibus nibh tempor viverra. Nam tempus varius urna sit amet vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id dui eget nisl elementum sollicitudin in ut quam. Vestibulum sit amet arcu nisi. Mauris a sem eu tellus luctus varius vitae nec risus. Vivamus malesuada egestas lacinia. Nunc congue iaculis arcu in sollicitudin. Cras imperdiet nibh id aliquet pulvinar. Pellentesque neque libero, dignissim laoreet tellus imperdiet, volutpat condimentum lorem. Vivamus commodo ipsum eu est dapibus auctor. Aenean ac pulvinar sapien."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": "1",
+      "body": "The  movie was spectacular"
+    },
+    {
+      "id": 2,
+      "userId": "2",
+      "body": "It was very exciting"
+    },
+    {
+      "id": 3,
+      "userId": "3",
+      "body": "Wow, very marvelous"
+    },
+    {
+      "id": 4,
+      "userId": "4",
+      "body": "Spectacular Moves"
+    },
+    {
+      "id": 5,
+      "userId": "5",
+      "body": "Dazzling Effects"
+    }
+  ]
+}
