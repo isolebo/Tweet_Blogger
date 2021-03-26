@@ -3,6 +3,11 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom'
 
+//redux imports
+import { Provider } from 'react-redux'
+import store from './dataStore'
+
+//components import
 import UserList from './components/UserList';
 import Navbar from './components/Navbar';
 import HomePage from './components/Homepage';
@@ -11,26 +16,23 @@ import AddPost from './components/AddPost';
 
 
 
+
+
 function App() {
   return (
-    <Router>
-        <div className="App">
-        <Navbar />
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route path="/users" component={UserList} />
-          <Route path="/login" component={Login} />
-          <Route path="/add" component={AddPost} />
-
-
-          
-
-
-          
-        
-      </Switch>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+          <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route path="/users" component={UserList} />
+            <Route path="/login" component={Login} />
+            <Route path="/add" component={AddPost} />
+        </Switch>
+        </div>
+        </Router>
+    </Provider>
   );
 }
 

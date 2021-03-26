@@ -2,7 +2,7 @@ import Axios from './BaseApi'
 
 
 class UserApi {
-    static getAllUser() { //gets all the users from the API
+    static getAllUsers() { //gets all the users from the API
         return Axios.get(`/users/`)
     }
 
