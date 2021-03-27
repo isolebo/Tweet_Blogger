@@ -9,6 +9,8 @@ import store from './dataStore'
 
 //components import
 import UserList from './components/UserList';
+import PostList from './components/PostList';
+import CommentList from './components/CommentList';
 import Navbar from './components/Navbar';
 import HomePage from './components/Homepage';
 import Login from './components/Login';
@@ -27,6 +29,8 @@ function App() {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path="/users" component={UserList} />
+            <Route path="/posts" component={PostList} />
+            <Route path="/comments" component={CommentList} />
             <Route path="/login" component={Login} />
             <Route path="/add" component={AddPost} />
         </Switch>

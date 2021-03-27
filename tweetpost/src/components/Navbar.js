@@ -33,6 +33,10 @@ const Navbar = () => {
              <Link className="nav-link" to= "/comments">Comments</Link>
         </li>
                     
+        <li className="nav-item">
+             <Link className="nav-link" to= "/posts">Posts</Link>
+        </li>
+                    
       
     </ul>
   </div>

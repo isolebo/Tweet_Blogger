@@ -13,18 +13,7 @@ const AddPost = () => {
         const newPost = { title, body}
         console.log(newPost)
         
-        PostApi.newPost({ newPost })
-            .then(response => {
-                console.log(response)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-            
-            //sets the input back to any empty string
-             setTitle('')
-             setBody('')
-             
+        
     }
 
 
