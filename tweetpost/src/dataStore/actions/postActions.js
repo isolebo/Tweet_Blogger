@@ -1,6 +1,6 @@
-import { GET_ALL_POSTS,GET_ALL_POSTS_FAILED} from '../types/posts';
+import { GET_ALL_POSTS,GET_ALL_POSTS_FAILED} from './types/posts';
 
-import PostApi from '../../../api/PostApi'
+import PostApi from '../../api/PostApi'
 
 
 

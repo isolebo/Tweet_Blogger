@@ -4,7 +4,7 @@ import PostApi from '../api/PostApi'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import {getAllThePosts} from '../dataStore/actions/types/postActions'
+import {getAllThePosts} from '../dataStore/actions/postActions'
 
 class PostList extends Component {
     

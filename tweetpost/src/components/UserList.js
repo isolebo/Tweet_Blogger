@@ -4,7 +4,7 @@ import UserApi from '../api/UserApi'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import {getAllUsers} from '../dataStore/actions/types/userActions'
+import {getAllUsers} from '../dataStore/actions/userActions'
 
 class UserList extends Component {
     

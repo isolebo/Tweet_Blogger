@@ -1,44 +1,32 @@
-import React, { useState, useEffect } from 'react'
-import CommentApi from '../api/CommentApi'
-import { Link } from 'react-router-dom'
+// Import all action types for the User
+import {   GET_ALL_COMMENTS, GET_ALL_COMMENTS_FAILED} from './types/comments';
 
+import CommentApi from '../../api/CommentApi'
 
+//One 'exported' action creator for each action type 
+//(Error-related action creators to be dispatch()ed inside their appropriate .catch() callbacks
 
-const CommentList = () => {
-    const [comment_list, setCommentList] = useState([])
-
-    const getAllComment = () => {
-
-        CommentApi.getAllComment()
-            .then(response => {
-                //Set our component's `post_list` array to the results of the API call
-                // which would be 'response.data' object
-                setCommentList(response.data) 
-                console.log(response)
+export const getAllTheComments = () => dispatch => {
+   
+    //Handles GET_ALL_Comments and GET_ALL_Comments_FAILED action types 
+    UserApi.getAllComments()
+        .then(res => {
+            dispatch({
+                type: GET_ALL_COMMENTs,
+                payload: res.data
             })
-            .catch(error => {
-                console.log(error.message)
+        })
+        .catch(err => {
+            dispatch({
+                type: GET_ALL_COMMENTS_FAILED,
+                payload: err
             })
-    }
-    useEffect(() => {
-        getAllComment()
-    }, [])
-
-    return (
-        <div>
-            <h4> List of Comments</h4>
-            { comment_list && comment_list.map(comment => (
-                <p key={comment.id}>
-                    <Link to={`/comments/${comment.id}`}>
-                        {comment.body}
-                    </Link>
-                        
-                
-                </p>
-            ))}
-            
-        </div>
-    )
+        })
 }
 
-export default CommentList
+const mapStateToProps = state => ({
+    users: state.comments.comment_list
+})
+export default connect(mapStateToProps,{getAllTheComments})(CommentList)
+
+
