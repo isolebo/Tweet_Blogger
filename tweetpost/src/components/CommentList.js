@@ -1,10 +1,10 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, {Component } from 'react'
 import PropTypes from 'prop-types'
 import CommentApi from '../api/CommentApi'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import {getAllTheComments} from '../dataStore/actions/commentActions'
+import {getAllTheComments} from '../redux/actions/commentActions'
 
 class CommentList extends Component {
     

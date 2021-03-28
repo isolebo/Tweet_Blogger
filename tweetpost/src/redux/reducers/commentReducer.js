@@ -1,18 +1,14 @@
-import {  GET_ALL_COMMENTS, GET_ALL_COMMENTS_FAILED
+import {
+    GET_ALL_COMMENTS, GET_ALL_COMMENTS_FAILED,
+    LIST_COMMENT_DETAILS, LIST_COMMENT_DETAILS_FAILURE,
+    
 } from '../actions/types/comments';
 
 //Create the initial/default state for the commentReducer
 const initialState = {
-    comment_list: [],
-    errorMessage: {},
-    get_comments_error : {},
-    comment: {},
-    get_comment_error: {},
-    register_error : {},
-    updated_comment: {},
-    update_comment_error: {},
-    delete_comment_error : {},
-    auth_token: ""
+    comment_list: [],errorMessage: {},
+    commentDetails: {},errorMessage: {}
+    
 }
 
 const commentReducer = (state = initialState, action) => {
@@ -28,6 +24,17 @@ const commentReducer = (state = initialState, action) => {
                 ...state,
                 errorMessage: action.payload
             };
+        case LIST_COMMENT_DETAILS:
+            return {
+                ...state,
+                commentDetails: action.payload
+            };
+        case LIST_COMMENT_DETAILS_FAILURE:
+            return {
+                ...state,
+                errorMessage: action.payload
+            };
+        
         
         default:
             return state;

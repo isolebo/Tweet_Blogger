@@ -1,25 +1,21 @@
 import React,{useState,useEffect} from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
-import PostApi from '../api/PostApi'
+import TweetApi from '../api/TweetApi'
 
 
-const AddPost = () => {
+const AddTweet = () => {
 
-    const [title,setTitle]= useState('')
-    const [body, setBody] = useState('')
-    
     const handleSubmit = (e) => {
         e.preventDefault();//prevents the webpage from reloading when submitting
-        const newPost = { title, body}
-        console.log(newPost)
+        const newTweet = { title, body}
+        console.log(newTweet)
         
         
     }
 
-
     return (
         <div> 
-            <h1 style={{textAlign:"center"}}>Add A Post</h1>
+            <h1 style={{textAlign:"center"}}>Add A Tweet</h1>
           <form>
             <div className="mb-3">
                 <label for="exampleFormControlInput1" className="form-label">Title</label>
@@ -48,4 +44,4 @@ const AddPost = () => {
     )
 }
 
-export default AddPost
+export default AddTweet

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import UserApi from '../api/UserApi'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import {getAllUsers} from '../dataStore/actions/userActions'
+import {getAllUsers} from '../redux/actions/userActions'
 
 class UserList extends Component {
     
@@ -14,8 +14,11 @@ class UserList extends Component {
     render() {
 
         const userItems = this.props.users.map(user => (
+
             <div key={user.id}>
-                <p>{user.firstName}{user.lastName }</p>
+                <Link to={`/details/${user.id}`}>
+                    <p>{user.firstName}{user.lastName}</p>
+                </Link>
             </div>
             ))
         return (
@@ -27,7 +30,7 @@ class UserList extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    users: state.users.user_list
+const mapStateToProps = (state) => ({
+    users: state.users.userList
 })
 export default connect(mapStateToProps,{getAllUsers})(UserList)

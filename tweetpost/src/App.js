@@ -9,12 +9,13 @@ import store from './dataStore'
 
 //components import
 import UserList from './components/UserList';
-import PostList from './components/PostList';
+import UserDetails from './components/UserDetails'
+import TweetList from './components/TweetList';
 import CommentList from './components/CommentList';
 import Navbar from './components/Navbar';
 import HomePage from './components/Homepage';
 import Login from './components/Login';
-import AddPost from './components/AddPost';
+import AddTweet from './components/AddTweet';
 
 
 
@@ -29,10 +30,11 @@ function App() {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path="/users" component={UserList} />
-            <Route path="/posts" component={PostList} />
+            <Route path="/details/:id" component={UserDetails}/>
+            <Route path="/tweets" component={TweetList} />
             <Route path="/comments" component={CommentList} />
             <Route path="/login" component={Login} />
-            <Route path="/add" component={AddPost} />
+            <Route path="/add" component={AddTweet} />
         </Switch>
         </div>
         </Router>
