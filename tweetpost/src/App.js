@@ -8,6 +8,10 @@ import store from './redux'
 
 //components import
 import UserList from './components/UserList';
+import UserDetails from './components/UserDetails';
+
+import ReplyList from './components/ReplyList';
+import TweetList from './components/TweetList';
 import Navbar from './components/Navbar';
 import HomePage from './components/Homepage';
 import Register from './components/Register';
@@ -28,6 +32,10 @@ function App() {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path="/users" component={UserList} />
+            <Route  path="/details/:id" component={UserDetails}/>
+
+            <Route path="/reply" component={ReplyList} />
+            <Route path="/tweets" component={TweetList} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/add" component={AddTweet} />

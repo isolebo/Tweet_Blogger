@@ -6,7 +6,7 @@ import replyReducer from './replyReducer'
 
 export default combineReducers({
     users: userReducer,
-    posts: tweetReducer,
+    tweets: tweetReducer,
     reply: replyReducer
 
 })

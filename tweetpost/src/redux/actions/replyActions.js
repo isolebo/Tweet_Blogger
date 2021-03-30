@@ -7,9 +7,9 @@ import {
 import ReplyApi from '../../api/ReplyApi'
 
 
-export const listAllReplies = () => dispatch => {
+export const listAllTheReplies = () => dispatch => {
    
-    ReplyApi.listAllReplies()
+    ReplyApi.getReply()
         .then(response => {
             dispatch({
                 type: LIST_ALL_REPLIES,

@@ -20,7 +20,7 @@ import TweetApi from '../../api/TweetApi'
             })
     }
 
-    import TweetApi from '../../api/TweetApi'
+
 
     export const addTweet = () => dispatch => {
         TweetApi.newTweet()

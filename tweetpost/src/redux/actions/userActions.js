@@ -6,10 +6,13 @@ import {
 } from './types/users';
 
 import UserApi from '../../api/UserApi'
+   import { useParams } from "react-router";
+
+
 
 
 export const getAllTheUsers = () => dispatch => {
-   
+
     UserApi.getAllUsers()
         .then(response => {
             console.log(response)
@@ -28,8 +31,9 @@ export const getAllTheUsers = () => dispatch => {
 }
 
 export const getUserDetails = () => dispatch => {
-   
-    UserApi.getUser()
+       const { id } = useParams()
+
+    UserApi.getUser({ params: { id } })
         .then(response => {
             dispatch({
                 type: USER_DETAILS,
