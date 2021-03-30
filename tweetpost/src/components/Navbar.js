@@ -18,11 +18,15 @@ const Navbar = () => {
         </li>
                     
         <li className="nav-item">
+            <Link className="nav-link" to="/register">Register</Link>
+         </li>
+                    
+        <li className="nav-item">
             <Link className="nav-link" to="/login">Login</Link>
         </li>
                     
         <li className="nav-item">
-            <Link className="nav-link" to="/add">Add A Tweet</Link>
+            <Link className="nav-link" to="/add">Add Tweet</Link>
         </li>
                     
         <li className="nav-item">
@@ -30,7 +34,7 @@ const Navbar = () => {
         </li>
                     
         <li className="nav-item">
-             <Link className="nav-link" to= "/comments">Comments</Link>
+             <Link className="nav-link" to= "/reply">Tweet Replies</Link>
         </li>
                     
         <li className="nav-item">

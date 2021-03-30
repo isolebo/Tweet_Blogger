@@ -2,7 +2,7 @@ import Axios from './BaseApi'
 
 
 class UserApi {
-    static getAllUsers() { //gets all the users from the API
+    static getAllUsers() { 
         return Axios.get(`/users/`)
     }
 
@@ -18,11 +18,11 @@ class UserApi {
         return Axios.put(`/users/`, updated_user)
     }
 
-    static patchUser(user_url, updated_fields) { //updates a part of the user API
+    static patchUser(user_url, updated_fields) { 
         return Axios.patch(`/user/`, updated_fields)
     }
 
-    static deleteUser(user_url) { //deletes a user in the API
+    static deleteUser(user_url) { 
         return Axios.deletes(`/users/user_url`)
     }
 

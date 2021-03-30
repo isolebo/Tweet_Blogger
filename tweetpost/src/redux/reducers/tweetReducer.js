@@ -5,8 +5,8 @@ import {
 
 //Create the initial/default state for the tweetReducer
 const initialState = {
-    tweetList: [], errorMessage: {},
-    addTweet:{},errorMessage:{},
+    tweetList: [], errorMessage_tweet: {},
+    addTweet:{},errorMessage_add:{},
     
     auth_token: ""
 }
@@ -22,7 +22,7 @@ const tweetReducer = (state = initialState, action) => {
         case LIST_ALL_TWEETS_FAILURE:
             return {
                 ...state,
-                errorMessage: action.payload
+                errorMessage_tweet: action.payload
             };
         
         case ADD_THE_TWEET:
@@ -33,7 +33,7 @@ const tweetReducer = (state = initialState, action) => {
         case ADD_THE_TWEET_FAILURE:
             return {
                 ...state,
-                errorMessage: action.payload
+                errorMessage_add: action.payload
             };
         
         
