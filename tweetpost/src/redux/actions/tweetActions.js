@@ -22,8 +22,8 @@ import TweetApi from '../../api/TweetApi'
 
 
 
-    export const addTweet = () => dispatch => {
-        TweetApi.newTweet()
+    export const addTweet = (tweetData) => dispatch => {
+        TweetApi.newTweet(tweetData)
             .then(response => {dispatch ({
                     type: ADD_THE_TWEET,
                     payload: response.data

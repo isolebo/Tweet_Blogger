@@ -1,7 +1,9 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import{Button,Form,FormGroup,Label,Input}
 from 'reactstrap'
 import UserApi from '../api/UserApi'
+import { registerUser } from '../redux/actions/userActions'
+import { useDispatch } from 'react-redux'
 
 
 
@@ -12,30 +14,18 @@ const Register = () => {
     const [firstName,setFirstName]= useState('')
     const [lastName,setLastName]= useState('')
     const [email,setEmail]= useState('')
-    const [password,setPassword]= useState('')
+    const [password, setPassword] = useState('')
+    
+    const dispatch = useDispatch()
 
 //Functions handles when the form is submitted
     const handleSubmit = (e) => {
         e.preventDefault();//prevents the webpage from reloading when submitting
         const newPerson = { firstName, lastName, email, password }
         console.log(newPerson)
+
+        dispatch(registerUser(newPerson))
         
-        UserApi.newUser({ newPerson })
-            .then(response => {
-                console.log(response)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-            
-    
-    
-    
-            //sets the input back to any empty string
-             setFirstName('')
-             setLastName('')
-             setEmail('')
-             setPassword('')
     }
     
     return (

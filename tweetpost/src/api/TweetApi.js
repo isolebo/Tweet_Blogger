@@ -12,7 +12,7 @@ class TweetApi{
     }
 
     static newTweet(new_tweet_object){
-        return Axios.get(`tweets`,new_tweet_object)
+        return Axios.post(`tweets`,new_tweet_object)
     }
 
 
