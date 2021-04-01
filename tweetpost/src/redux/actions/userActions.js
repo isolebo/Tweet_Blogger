@@ -6,11 +6,7 @@ import {
 } from './types/users';
 
 import UserApi from '../../api/UserApi'
-   import { useParams } from "react-router";
-
-
-
-
+  
 export const getAllTheUsers = () => dispatch => {
 
     UserApi.getAllUsers()
@@ -30,10 +26,9 @@ export const getAllTheUsers = () => dispatch => {
         })
 }
 
-export const getUserDetails = () => dispatch => {
-       const { id } = useParams()
+export const getUserDetails = (id) => dispatch => {
 
-    UserApi.getUser({ params: { id } })
+    UserApi.getUser(id)
         .then(response => {
             dispatch({
                 type: USER_DETAILS,
@@ -49,9 +44,9 @@ export const getUserDetails = () => dispatch => {
 }
 
 
-export const registerUser = () => dispatch => {
+export const registerUser = (new_User) => dispatch => {
    
-    UserApi.newUser()
+    UserApi.newUser(new_User)
         .then(response => {
             dispatch({
                 type: USER_REGISTRATION,
@@ -66,9 +61,9 @@ export const registerUser = () => dispatch => {
         })
 }
 
-export const loginUser = () => dispatch => {
+export const loginUser = (login_info) => dispatch => {
    
-    UserApi.getUser()
+    UserApi.loginUser(login_info)
         .then(response => {
             dispatch({
                 type: USER_LOGIN,

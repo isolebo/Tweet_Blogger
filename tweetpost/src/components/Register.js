@@ -21,10 +21,9 @@ const Register = () => {
 //Functions handles when the form is submitted
     const handleSubmit = (e) => {
         e.preventDefault();//prevents the webpage from reloading when submitting
-        const newPerson = { firstName, lastName, email, password }
-        console.log(newPerson)
-
-        dispatch(registerUser(newPerson))
+        const newUser = { firstName, lastName, email, password }
+       
+        dispatch(registerUser(newUser))
         
     }
     

@@ -64,9 +64,6 @@ const userReducer = (state = initialState, action) => {
                 userLogin_error: action.payload
             };
         
-        
-        
-
         default:
             return state;
         

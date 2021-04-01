@@ -32,7 +32,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path="/users" component={UserList} />
-            <Route  path="/details/:id" component={UserDetails}/>
+            <Route  path="/users/:id" component={UserDetails}/>
 
             <Route path="/reply" component={ReplyList} />
             <Route path="/tweets" component={TweetList} />

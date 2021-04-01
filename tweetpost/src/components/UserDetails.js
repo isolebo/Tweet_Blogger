@@ -1,29 +1,31 @@
 import React, { useEffect } from 'react'
 import { getUserDetails } from '../redux/actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
+import { useParams } from "react-router";
 
 
-const UserDetails = () => {
+const UserDetails = (user) => {
+    const { id } = useParams()//passes an id to the get the id of the post
+
     //use to dispatch an action
     const dispatch = useDispatch()
-    //users from root reducer, userDetails from userReducer
-    const users = useSelector(state => state.users.userDetails)
+    const user = useSelector(state => state.users.userDetails)
+    
     
     useEffect(() => {
         //dispatches getAllTheUser() function
-       dispatch(getUserDetails())
+       dispatch(getUserDetails(id))
     }, [])
 
     return (
         <div>
             <h1>Details of Users</h1>
-            {users.map(user => {
-                return <p key={user.id}>
-                        {user.firstName}{user.lastName}
-                        {user.email}
-                   
-                </p>
-            })}
+            <ul className="list-group">
+                <li className="list-group-item active"> Post ID: {user.id}</li>
+                <li className="list-group-item">User Id: {user.firstName}</li>
+                <li className="list-group-item">Title: {user.lastName}</li>
+                <p className="list-group-item">Body: {user.email}</p>
+            </ul>
         </div>
         )
 }

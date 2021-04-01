@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "json-server --watch db.json --port 5000 ",
+    "dev": "concurrently \"npm run server\" \"npm run tweetpost\"",
     "tweetpost": "npm start --prefix ../tweetpost"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.0.0",
     "json-server": "^0.16.3"
   }
 }
