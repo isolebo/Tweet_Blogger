@@ -1,7 +1,7 @@
 import {
     LIST_ALL_TWEETS, LIST_ALL_TWEETS_FAILURE,
-    ADD_THE_TWEET, ADD_THE_TWEET_FAILURE
-
+    ADD_THE_TWEET, ADD_THE_TWEET_FAILURE,
+    LIST_TWEET_DETAILS, LIST_TWEET_DETAILS_FAILURE
 } from './types/tweets';
 
 import TweetApi from '../../api/TweetApi'
@@ -20,8 +20,6 @@ import TweetApi from '../../api/TweetApi'
             })
     }
 
-
-
     export const addTweet = (tweetData) => dispatch => {
         TweetApi.newTweet(tweetData)
             .then(response => {dispatch ({
@@ -31,6 +29,20 @@ import TweetApi from '../../api/TweetApi'
             })
             .catch(error =>  {dispatch ({
                     type: ADD_THE_TWEET_FAILURE,
+                    payload: error
+                })
+            })
+    }
+
+    export const listTweetDetails = (tweet_id) => dispatch => {
+        TweetApi.getTweet(tweet_id)
+            .then(response => {dispatch ({
+                    type: LIST_TWEET_DETAILS,
+                    payload: response.data
+                })
+            })
+            .catch(error =>  {dispatch ({
+                    type: LIST_TWEET_DETAILS_FAILURE,
                     payload: error
                 })
             })

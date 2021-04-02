@@ -9,18 +9,14 @@ import store from './redux'
 //components import
 import UserList from './components/UserList';
 import UserDetails from './components/UserDetails';
-
 import ReplyList from './components/ReplyList';
 import TweetList from './components/TweetList';
+import TweetDetails from './components/TweetDetails';
 import Navbar from './components/Navbar';
 import HomePage from './components/Homepage';
 import Register from './components/Register';
 import Login from './components/Login';
-import AddTweet from './components/AddTweet';
-
-
-
-
+import AddNewTweet from './components/AddNewTweet';
 
 
 function App() {
@@ -32,15 +28,13 @@ function App() {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path="/users" component={UserList} />
-            <Route  path="/users/:id" component={UserDetails}/>
-
+            <Route  path="/user/:id" component={UserDetails}/>
             <Route path="/reply" component={ReplyList} />
             <Route path="/tweets" component={TweetList} />
+            <Route  path="/tweet/:id" component={TweetDetails}/>
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
-            <Route path="/add" component={AddTweet} />
-
-
+            <Route path="/add" component={AddNewTweet} />
         </Switch>
         </div>
         </Router>

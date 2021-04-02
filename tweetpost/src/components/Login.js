@@ -1,14 +1,22 @@
 import React,{useState} from 'react'
-import{Button,Form,FormGroup,Label,Input} from 'reactstrap'
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import { loginUser } from '../redux/actions/userActions'
+import { useDispatch } from 'react-redux'
 
 const Login = () => {
 
     const [email,setEmail]= useState('')
     const [password, setPassword] = useState('')
+    const dispatch = useDispatch()
     
     const handleSubmit = (e) => {
-        e.preventDefault();//pr
+        e.preventDefault();
+        const loginInfo = {email,password}
 
+        dispatch(loginUser(loginInfo))
+
+        setEmail(" ")
+        setPassword(" ")
     }
 
     return (

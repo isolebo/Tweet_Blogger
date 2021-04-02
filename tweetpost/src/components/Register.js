@@ -15,7 +15,6 @@ const Register = () => {
     const [lastName,setLastName]= useState('')
     const [email,setEmail]= useState('')
     const [password, setPassword] = useState('')
-    
     const dispatch = useDispatch()
 
 //Functions handles when the form is submitted
@@ -24,6 +23,11 @@ const Register = () => {
         const newUser = { firstName, lastName, email, password }
        
         dispatch(registerUser(newUser))
+
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setPassword('')
         
     }
     

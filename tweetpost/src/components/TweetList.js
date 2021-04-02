@@ -19,7 +19,7 @@ const TweetList = () => {
             <h1>List of tweets</h1>
             {tweets.map(tweet => {
                 return <p key={tweet.id}>
-                    <Link to={`/details/${tweet.id}`}>
+                    <Link to={`/tweet/${tweet.id}`}>
                         {tweet.body}
                     </Link>  
                 </p>

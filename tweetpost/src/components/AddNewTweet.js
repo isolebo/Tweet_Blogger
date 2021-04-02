@@ -1,44 +1,46 @@
 import React,{useState,useEffect} from 'react'
 import { Form, FormGroup, Button, Label, Input } from 'reactstrap'
-import { useSelector, useDispatch } from 'react-redux'
+import {  useDispatch } from 'react-redux'
 import {addTweet} from '../redux/actions/tweetActions'
 
 
-const AddTweet = () => {
-    const [email, setEmail] = useState({})
-    const [body, setBody] = useState({})
-    const dispatch = useDispatch
-    const newTweet = (email,body)
+const AddNewTweet = () => {
+    const [email, setEmail] = useState('')
+    const [body, setBody] = useState('')
+    const dispatch = useDispatch()
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
-      dispatch(addTweet(newTweet))
+       
+        const tweetData = { email, body }
+        dispatch(addTweet(tweetData))
+        
+        setEmail('')
+        setBody('')
     }
 
-     const handleChange = (e) => {
-        setEmail(e.target.value)
-         setBody(e.target.value)
-     }
-    
-    useEffect(() => {
-        
-    }, [])
-
+    //  const handleChange = (e) => {
+    //     setEmail(e.target.value)
+    //      setBody(e.target.value)
+    //  }
     
     return (
         <div>
             <h1 className="addTweet" style={{textAlign:'center'}}>Add a New Tweet</h1>
-            <Form className="add">
+            <Form className="add" onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label>Email</Label>
                     <Input type="email"
                     placeholder="Email"
                     name="email"
                         id="email"
-                        onChange={(e) => handleChange(e)}
+                        value={email}
+                      onChange={(e) => setEmail(e.target.value)}
 
 
-                    />
+
+                    ></Input>
                 </FormGroup>
 
                 <FormGroup>
@@ -48,7 +50,8 @@ const AddTweet = () => {
                             id="body"
                             rows="5"  
                             name="body"
-                            onChange={(e) => handleChange(e)}
+                            value={body}
+                    onChange={(e) => setBody(e.target.value)}
 
 
                         ></textarea>
@@ -65,4 +68,4 @@ const AddTweet = () => {
     )
 }
 
-export default AddTweet
+export default AddNewTweet

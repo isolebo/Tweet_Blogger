@@ -29,6 +29,7 @@ export const getAllTheUsers = () => dispatch => {
 export const getUserDetails = (id) => dispatch => {
 
     UserApi.getUser(id)
+        
         .then(response => {
             dispatch({
                 type: USER_DETAILS,
