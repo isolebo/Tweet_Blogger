@@ -3,4 +3,4 @@
  and other functions related to blogging app.
  
  
- *#Functionality
+ `Functionality`
