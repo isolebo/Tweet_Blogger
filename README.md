@@ -5,3 +5,4 @@
  
  # Functionality
  
+* A visitor can register or login to access a new account.
