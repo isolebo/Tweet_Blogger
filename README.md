@@ -1,4 +1,4 @@
-# Principles of Design
+# Design Objective
  Intended to build a platform that allows a visitor to the site to Register as a user, log in, add tweets
  and other functions related to blogging app.
  
@@ -16,4 +16,4 @@ I used React-Redux with hooks for my implementation of the project.
 
 * React.js
 * Redux
-* json-server
+* `json-server `
