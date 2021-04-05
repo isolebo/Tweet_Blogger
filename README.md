@@ -24,6 +24,14 @@ json-server for my backend.
 This project focuses on the implementation of using React with Redux in functional components. I chose
 Redux because managing state values was easier.
 
-* frontend/: The files contained in this folder are my React.js files, Redux, and Axios based API cals
+* frontend/: The files contained in this folder are my React.js files, Redux, and Axios based API calls
 
 * Server.js: I chose `json-server` as my backend.
+
+In order to achieve my design principles, I created to 3 folders to house my files, so that I can achieve maximum
+order of accessibility and orderliness.
+
+* redux/: This folder contains all neccessary files to mantain the state of my entire application. I created sub-folders
+  in order to maintain clearity and resusable files.
+  
+1.  reducers/:
