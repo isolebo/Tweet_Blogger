@@ -27,9 +27,7 @@ export const getAllTheUsers = () => dispatch => {
 }
 
 export const getUserDetails = (id) => dispatch => {
-
     UserApi.getUser(id)
-        
         .then(response => {
             dispatch({
                 type: USER_DETAILS,
@@ -64,7 +62,7 @@ export const registerUser = (new_User) => dispatch => {
 
 export const loginUser = (login_info) => dispatch => {
    
-    UserApi.loginUser(login_info)
+    UserApi.getUser(login_info)
         .then(response => {
             dispatch({
                 type: USER_LOGIN,

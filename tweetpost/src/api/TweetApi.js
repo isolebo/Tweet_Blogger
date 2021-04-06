@@ -7,7 +7,7 @@ class TweetApi{
         return Axios.get(`/tweets/`)
     }
 
-    static listTweet(tweet_url){
+    static getTweet(tweet_url){
         return Axios.get(`/tweets/`,tweet_url)
     }
 
