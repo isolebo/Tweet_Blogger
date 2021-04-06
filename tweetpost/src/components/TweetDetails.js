@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 
 
 const TweetDetails = (id) => {
-    //const { id } = useParams()
+    const { id } = useParams()
     const dispatch = useDispatch()
     const tweets = useSelector(state => state.tweets.tweetDetails)
 
