@@ -34,7 +34,7 @@ import TweetApi from '../../api/TweetApi'
             })
     }
 
-    export const listTweetDetails = (tweet_id) => dispatch => {
+    export const getTweetDetails = (tweet_id) => dispatch => {
         TweetApi.getTweet(tweet_id)
             .then(response => {dispatch ({
                     type: LIST_TWEET_DETAILS,

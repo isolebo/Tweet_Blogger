@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { listTweetDetails } from '../redux/actions/tweetActions'
+import { getTweetDetails } from '../redux/actions/tweetActions'
 import { useDispatch, useSelector } from 'react-redux'
 import ReplyList from './ReplyList'
 import { useParams } from "react-router";
@@ -12,7 +12,7 @@ const TweetDetails = () => {
 
     useEffect(() => {
         //dispatches getAllTheUser() function
-        dispatch(listTweetDetails(id))
+        dispatch(getTweetDetails(id))
     }, [])
 
     return (
@@ -22,8 +22,8 @@ const TweetDetails = () => {
                 <li className="list-group-item active"> tweet ID: {tweet_obj.id}</li>
                 <li className="list-group-item">User Id: {tweet_obj.userId}</li>
                 <p className="list-group-item">Body: {tweet_obj.body}</p>
-            </ul>
-            <ReplyList tweet_Id={id}/>
+            </ul>t
+            <ReplyList tweet_Id={tweet_obj.id}/>
             
        
         </div>
