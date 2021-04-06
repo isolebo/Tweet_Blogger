@@ -8,7 +8,7 @@ class TweetApi{
     }
 
     static getTweet(tweet_url){
-        return Axios.get(`/tweets/`,tweet_url)
+        return Axios.get(`/tweets/${tweet_url}`)
     }
 
     static newTweet(new_tweet_object){
