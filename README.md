@@ -32,6 +32,15 @@ In order to achieve my design principles, I created to 3 folders to house my fil
 order of accessibility and orderliness.
 
 * redux/: This folder contains all neccessary files to mantain the state of my entire application. I created sub-folders
-  in order to maintain clearity and resusable files.
+  in order to maintain clearity and resusable codes.
   
-1.  reducers/:
+1.  reducers/: The folder contains three files usersReducer/, tweetsReducer/, and replyReducer/. In these files I've created
+    functions that takes in the initial values of the state, and an action as the second parameter to determine it's change. Included
+    in this file there is an index.js/ file that combines all the reducers into one export.
+ 
+2.  actions/:  This folders contain three files usersActions.js/, tweetActions.js/, and replyActions.js. These files creates actions for 
+    each reducer.
+    
+3.  index.js is whre
+    
+    
