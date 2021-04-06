@@ -5,10 +5,10 @@ import ReplyList from './ReplyList'
 import { useParams } from "react-router";
 
 
-const TweetDetails = (id) => {
+const TweetDetails = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
-    const tweets = useSelector(state => state.tweets.tweetDetails)
+    const tweet_obj = useSelector(state => state.tweet.tweetDetails)
 
     useEffect(() => {
         //dispatches getAllTheUser() function
@@ -19,9 +19,9 @@ const TweetDetails = (id) => {
         <div>
             <h2>Tweet Details</h2>
             <ul className="list-group">s
-                <li className="list-group-item active"> tweet ID: {tweets.id}</li>
-                <li className="list-group-item">User Id: {tweets.userId}</li>
-                <p className="list-group-item">Body: {tweets.body}</p>
+                <li className="list-group-item active"> tweet ID: {tweet_obj.id}</li>
+                <li className="list-group-item">User Id: {tweet_obj.userId}</li>
+                <p className="list-group-item">Body: {tweet_obj.body}</p>
             </ul>
             <ReplyList tweet_Id={id}/>
             
