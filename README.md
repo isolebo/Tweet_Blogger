@@ -41,6 +41,6 @@ order of accessibility and orderliness.
 2.  actions/:  This folders contain three files usersActions.js/, tweetActions.js/, and replyActions.js. These files creates actions for 
     each reducer.
     
-3.  index.js is the file where created the instance of the store
+3.  index.js is the file where created the instance of the store 
     
     
