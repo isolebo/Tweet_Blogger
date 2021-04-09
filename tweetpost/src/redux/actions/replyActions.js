@@ -1,6 +1,6 @@
 import {
     LIST_ALL_REPLIES, LIST_ALL_REPLIES_FAILED,
-    LIST_REPLY_DETAILS,LIST_REPLY_DETAILS_FAILURE
+    GET_REPLY_DETAILS, GET_REPLY_DETAILS_FAILURE
     
 } from './types/reply';
 
@@ -9,7 +9,7 @@ import ReplyApi from '../../api/ReplyApi'
 
 export const listAllTheReplies = () => dispatch => {
    
-    ReplyApi.getReply()
+    ReplyApi.getAllReplies()
         .then(response => {
             dispatch({
                 type: LIST_ALL_REPLIES,
@@ -25,18 +25,18 @@ export const listAllTheReplies = () => dispatch => {
         })
 }
 
-export const listReplyDetails = () => dispatch => {
+export const getReplyDetails = (reply_id) => dispatch => {
    
-    ReplyApi.listReplyDetails()
+    ReplyApi.getReply(reply_id)
         .then(response => {
             dispatch({
-                type: LIST_REPLY_DETAILS,
+                type: GET_REPLY_DETAILS,
                 payload: response.data
             })
         })
         .catch(error => {
             dispatch({
-                type: LIST_REPLY_DETAILS_FAILURE,
+                type: GET_REPLY_DETAILS_FAILURE,
                 payload: error
             })
         })

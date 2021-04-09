@@ -22,10 +22,6 @@ const Navbar = () => {
          </li>
                     
         <li className="nav-item">
-            <Link className="nav-link" to="/login">Login</Link>
-        </li>
-                    
-        <li className="nav-item">
             <Link className="nav-link" to="/add">Add Tweet</Link>
         </li>
                     
@@ -34,7 +30,7 @@ const Navbar = () => {
         </li>
                     
         <li className="nav-item">
-             <Link className="nav-link" to= "/reply">Tweet Replies</Link>
+             <Link className="nav-link" to = "/reply" >Tweet Replies</Link>
         </li>
                     
         <li className="nav-item">

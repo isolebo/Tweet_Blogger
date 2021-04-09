@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import { loginUser } from '../redux/actions/userActions'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+
 
 const Login = () => {
 
@@ -10,7 +12,7 @@ const Login = () => {
     const dispatch = useDispatch()
     
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         const loginInfo = {email,password}
     
         dispatch(loginUser(loginInfo))
@@ -45,7 +47,14 @@ const Login = () => {
                 />
             </FormGroup>
             <Button className="btn-lg btn-dark btn-block" type='submit'>Login</Button>
+            
+            <span>
+                Don't have an account, please sign up
+                <Link className="nav-link" to="/register">Register</Link>
+            </span>
+
         </Form>
+       
     )
 }
 

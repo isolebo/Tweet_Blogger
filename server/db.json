@@ -97,6 +97,27 @@
       "email": "",
       "password": "",
       "id": 16
+    },
+    {
+      "firstName": "Mutiat",
+      "lastName": "Solebo",
+      "email": "woverine3232@yahoo.com",
+      "password": "bj",
+      "id": 17
+    },
+    {
+      "firstName": "Isiaq",
+      "lastName": "Solebo",
+      "email": "i.solebo32@gmail.com",
+      "password": "sjkws",
+      "id": 18
+    },
+    {
+      "firstName": "Moh",
+      "lastName": "sdddd",
+      "email": "info@moreservices.org",
+      "password": "djhkjd",
+      "id": 19
     }
   ],
   "tweets": [

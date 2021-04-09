@@ -8,11 +8,7 @@ class ReplyApi{
     }
 
     static getReply(reply_url){
-        return Axios.get(`/reply/`,reply_url)
-    }
-
-    static getreplyForTweet(tweet_id){
-        return Axios.get(`/reply?tweetId=${tweet_id}`)
+        return Axios.get(`/reply/${reply_url}`)
     }
 
     static newReply(new_reply_object){

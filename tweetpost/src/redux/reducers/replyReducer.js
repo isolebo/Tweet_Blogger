@@ -1,13 +1,13 @@
 import {
     LIST_ALL_REPLIES, LIST_ALL_REPLIES_FAILED,
-    LIST_REPLY_DETAILS, LIST_REPLY_DETAILS_FAILURE,
+    GET_REPLY_DETAILS, GET_REPLY_DETAILS_FAILURE,
     
 } from '../actions/types/reply';
 
 //Create the initial/default state for the REPLYReducer
 const initialState = {
     replyList: [],errorMessage_reply:{},
-    replyDetails: {},errorMessage_det: {}
+    replyDetails: {},errorMessage_details: {}
     
 }
 
@@ -24,15 +24,15 @@ const replyReducer = (state = initialState, action) => {
                 ...state,
                 errorMessage_reply: action.payload
             };
-        case LIST_REPLY_DETAILS:
+        case GET_REPLY_DETAILS:
             return {
                 ...state,
                 replyDetails: action.payload
             };
-        case LIST_REPLY_DETAILS_FAILURE:
+        case GET_REPLY_DETAILS_FAILURE:
             return {
                 ...state,
-                errorMessage_det: action.payload
+                errorMessage_details: action.payload
             };
         
         

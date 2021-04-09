@@ -1,15 +1,19 @@
 import React,{useState,useEffect} from 'react'
-import{Button,Form,FormGroup,Label,Input}
-from 'reactstrap'
+import { Button, Form, FormGroup, Label, Input }
+    from 'reactstrap'
+import {useHistory} from 'react-router-dom'
+
 import UserApi from '../api/UserApi'
 import { registerUser } from '../redux/actions/userActions'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import UserList from './UserList'
+
 
 
 
 const Register = () => {
-   //UserApi.new user
-
+const history = useHistory()
 //initialize a new state, and method to set it toa new state
     const [firstName,setFirstName]= useState('')
     const [lastName,setLastName]= useState('')
@@ -23,6 +27,8 @@ const Register = () => {
         const newUser = { firstName, lastName, email, password }
        
         dispatch(registerUser(newUser))
+        changeUrl()
+       
 
         setFirstName('')
         setLastName('')
@@ -30,6 +36,10 @@ const Register = () => {
         setPassword('')
         
     }
+    const changeUrl = () => {
+        history.push("/users")
+    }
+    
     
     return (
         
@@ -86,8 +96,13 @@ const Register = () => {
             </FormGroup>
 
             <Button 
-                 type='submit' className='btn-primary btn-lg btn-block '>Submit
+                 type='submit' className='btn-primary btn-lg btn-block '  >Submit
             </Button>
+
+            <span>
+                Already have an account, please login
+                <Link className="nav-link" to="/login">login</Link>
+            </span>
                 
         </Form>
         

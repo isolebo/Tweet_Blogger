@@ -19,7 +19,7 @@ const UserDetails = () => {
             <h1>Details of User</h1>
             <ul >
                 <li> User ID: {users.id}</li>
-                <li >Name: {users.firstName}{users.lastName}</li>
+                <li >Name: {users.firstName} {users.lastName}</li>
                 <li >Email: {users.email}</li>
             </ul>
         </div>
