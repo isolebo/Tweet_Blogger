@@ -31,21 +31,21 @@ Redux because managing state values was easier.
 In order to achieve my design principles, I created to 3 folders to house my files, so that I can achieve maximum
 order of accessibility and orderliness.
 
-* redux/: This folder contains all neccessary files to mantain the state of my entire application. I created sub-folders
+* `redux/`: This folder contains all neccessary files to mantain the state of my entire application. I created sub-folders
   in order to maintain clearity and resusable codes.
   
-1.  reducers/: The folder contains three files usersReducer/, tweetsReducer/, and replyReducer/. In these files I've created
+1.  `reducers/`: The folder contains three files `usersReducer/`, `tweetsReducer/`, and `replyReducer/`. In these files I've created
     functions that takes in the initial values of the state, and an action as the second parameter to determine it's change. Included
     in this file there is an index.js/ file that combines all the reducers into one export.
  
-2.  actions/:  This folders contain three files usersActions.js/, tweetActions.js/, and replyActions.js. These files creates actions for 
+2.  `actions/`:  This folders contain three files `usersActions.js/`, `tweetActions.js/`, and `replyActions.js/`. These files creates actions for 
     each reducer.
     
 3.  index.js is the file where created the instance of the store 
     
 * `components/`: This folder contains all the user interface arrangement of logics.
 
-1.  Regsiter/ and Login/: This component creates a new  user who wants to access the application.
+1.  `Regsiter/` and `Login/`: This component creates a new  user who wants to access the application.
 
   In the register component, a new visitor to the site is able to create a new account, and access the information
   pertaining to a new users account. If a new euser has been created then the user will be able to log in.
