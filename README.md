@@ -43,8 +43,10 @@ order of accessibility and orderliness.
     
 3.  index.js is the file where created the instance of the store 
     
-* components/: This folder contains all the user interface arrangment of logi.
+* `components/`: This folder contains all the user interface arrangement of logics.
 
-1.  Regsiter/: This component creates a new  user who wants to access the application.
+1.  Regsiter/ and Login/: This component creates a new  user who wants to access the application.
 
-  In the register component
+  In the register component, a new visitor to the site is able to create a new account, and access the information
+  pertaining to a new users account. If a new euser has been created then the user will be able to log in.
+2.  UserList/,
