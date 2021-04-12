@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllTheUsers } from '../redux/actions/userActions'
-import { useSelector,useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import {deleteTheUser} from '../redux/actions/userActions'
 
 const UserList = () => {
     //use to dispatch an action
     const dispatch = useDispatch()
     //users from root reducer, userList from userReducer
     const users = useSelector(state => state.users.userList)
+
+    
+    
     
     useEffect(() => {
         //dispatches getAllTheUser() function
@@ -21,10 +25,14 @@ const UserList = () => {
                 return <p key={user.id}>
                     <Link to={`/user/${user.id}`}>
                         {user.firstName}{user.lastName}
-                    </Link>  
+                    </Link> 
+                        
                 </p>
+                
             })}
+             
         </div>
+        
         )
 }
 

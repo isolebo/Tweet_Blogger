@@ -2,14 +2,17 @@ import {
     LIST_ALL_USERS, LIST_ALL_USERS_FAILURE,
     USER_DETAILS, USER_DETAILS_FAILURE,
     USER_REGISTRATION, USER_REGISTRATION_FAILURE,
-    USER_LOGIN, USER_LOGIN_FAILURE
+    USER_LOGIN, USER_LOGIN_FAILURE,
+    DELETE_USER, DELETE_USER_FAILURE
 } from '../actions/types/users';
 
 const initialState = {
     userList: [], userList_error: {},
     userDetails: {}, userDetails_error: {},
     userRegistration: {}, userRegistration_error: {},
-    userLogin:{}, userLogin_error: {},
+    userLogin: {}, userLogin_error: {},
+    deleteUser:{}, deleteUser_error:{},
+    
     
     auth_token: ""
 }
@@ -62,6 +65,18 @@ const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userLogin_error: action.payload
+            };
+        
+        case DELETE_USER:
+            return {
+                ...state,
+                deleteUser: action.payload
+            };
+        
+        case DELETE_USER_FAILURE:
+            return {
+                ...state,
+                deleteUser_error: action.payload
             };
         
         default:
