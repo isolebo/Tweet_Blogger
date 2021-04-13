@@ -10,9 +10,6 @@ const UserList = () => {
     //users from root reducer, userList from userReducer
     const users = useSelector(state => state.users.userList)
 
-    
-    
-    
     useEffect(() => {
         //dispatches getAllTheUser() function
        dispatch(getAllTheUsers())
@@ -24,13 +21,10 @@ const UserList = () => {
             {users.map(user => {
                 return <p key={user.id}>
                     <Link to={`/user/${user.id}`}>
-                        {user.firstName}{user.lastName}
-                    </Link> 
-                        
-                </p>
-                
+                        {user.firstName} {user.lastName}
+                    </Link>  
+                </p> 
             })}
-             
         </div>
         
         )
