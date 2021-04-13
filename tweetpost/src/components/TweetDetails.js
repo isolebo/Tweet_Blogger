@@ -13,7 +13,7 @@ const TweetDetails = () => {
     const user_obj = useSelector(state => state.users.userDetails)
 
     useEffect(() => {
-        //dispatches getAllTheUser() function
+        
         dispatch(getTweetDetails(id))
         dispatch(getUserDetails(tweet_obj.id))
     }, [])
@@ -26,8 +26,6 @@ const TweetDetails = () => {
                 <p className="list-group-item">Name: {user_obj.firstName} {user_obj.lastName}</p>
             </ul>
             <ReplyList tweet_Id={tweet_obj.id}/>
-            
-       
         </div>
     )
 }

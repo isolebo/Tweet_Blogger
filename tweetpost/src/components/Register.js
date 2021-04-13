@@ -29,18 +29,14 @@ const history = useHistory()
         dispatch(registerUser(newUser))
         changeUrl()
        
-
         setFirstName('')
         setLastName('')
         setEmail('')
         setPassword('')
-        
     }
     const changeUrl = () => {
         history.push("/users")
     }
-    
-    
     return (
         
         <Form className='register' onSubmit={handleSubmit}>
