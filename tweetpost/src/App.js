@@ -19,6 +19,10 @@ import Register from './components/Register';
 import Login from './components/Login';
 import AddNewTweet from './components/AddNewTweet';
 
+import { render } from '@testing-library/react'
+import "@testing-library/jest-dom/extend-expect"
+
+
 
 
 function App() {

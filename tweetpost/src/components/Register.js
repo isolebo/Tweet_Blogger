@@ -41,7 +41,11 @@ const history = useHistory()
         
         <Form className='register' onSubmit={handleSubmit}>
             <h1 style={{textAlign:"center"}}>
-                <span className='text-center'>Add New User</span>
+                <span
+                    className='text-center'
+                    data-testid="header"
+                    
+                >Add New User</span>
             </h1>
             <FormGroup>
                 <Label>First Name</Label>
