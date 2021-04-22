@@ -3,11 +3,11 @@ import { Button, Form, FormGroup, Label, Input }
     from 'reactstrap'
 import {useHistory} from 'react-router-dom'
 
-//import UserApi from '../api/UserApi'
+
 import { registerUser } from '../redux/actions/userActions'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-//import UserList from './UserList'
+
 
 
 
