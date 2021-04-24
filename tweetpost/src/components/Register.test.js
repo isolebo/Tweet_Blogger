@@ -2,10 +2,10 @@
 // import { shallow } from 'enzyme'
 // import Register from './Register'
 
-// it('should render register title', () => {
+// test('should render register title', () => {
 //     const wrapper = shallow(<Register />)
-//     const span = wrapper.find('span')
-//     const result = span.text()
+//     const header = wrapper.find('h1')
+//     const result = header.text()
 
 //     expect(result).toBe("Add New User")
 // })
